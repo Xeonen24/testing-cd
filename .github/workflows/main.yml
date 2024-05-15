@@ -23,5 +23,3 @@ jobs:
     - name: copy files to production
       run: |
         ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cp -r ${{ secrets.WORK_DIR }}/dist/* /var/www/html/test/"
-    - name: cleanup
-      run: rm -rf ~/.ssh
